@@ -30,6 +30,8 @@ c. Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   
     812-2-10
 
+    Answer : (\d{4})-(\d{1,2})-(\d{1,2}) but it will not match 812-2-10 but can also match 3333-33-33
+
 ### 2. State Machines
 
 > A useful tool for drawing state machines is [Evan's FSM
