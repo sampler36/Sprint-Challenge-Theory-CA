@@ -8,6 +8,8 @@ a. Single regex that matches either of these:
     
     antelopes rock out
 
+    Answer: [a-z] would match both the sentences
+
 b. Regex that matches either of:
 
     goat
