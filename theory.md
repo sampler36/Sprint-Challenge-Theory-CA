@@ -49,6 +49,25 @@ a. Draw a state machine that corresponds to the following regex:
   Remember the ε transition can be used to move between states without
   consuming input. 
 
+  Answer: firstly i have to explain the regex
+ 
+ ab*c+d?[ef]
+
+ a matches the characters  a literally (case sensitive)
+b*
+matches the character b literally (case sensitive)
+* Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+c+
+matches the character c literally (case sensitive)
++ Quantifier — Matches between one and unlimited times, as many times as possible, giving back as needed (greedy)
+d?
+matches the character d literally (case sensitive)
+? Quantifier — Matches between zero and one times, as many times as possible, giving back as needed (greedy)
+Match a single character present in the list below [ef]
+ef matches a single character in the list ef (case sensitive)
+the the statemachine  is attachech i the  picture 
+
+
 b. Draw a state machine diagram for the lion and label the transition events that
   cause state transitions.
   
