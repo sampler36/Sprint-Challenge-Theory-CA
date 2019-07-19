@@ -4,6 +4,25 @@ def get_new_value(old_gen, old_automata):
     # TBC - add code to generate the next row of cells,
     # then replace the return statement below to
     # return the updated automata
+    for i in range(generations* SQ_NUM, generations * SQ_NUM + SQ_NUM):
+        live = 0
+
+        if old_automata[i - SQ_NUM]:
+            live += 1
+     
+        if i - SQ_NUM - 1 >= 0 and old_automata[i - SQ_NUM - 1]:
+            if i - SQ_NUM - 1 >= old_gen * SQ_NUM:
+                live += 1
+       
+        if old_automata[i - SQ_NUM + 1]:
+            if i - SQ_NUM + 1 < old_gen * SQ_NUM + SQ_NUM:
+                live += 1
+        #  compare the old generation with the new one
+        if live == 0 or live >= 3:
+            old_automata[i] = 0
+        else:
+            old_automata[i] = 1
+
     return old_automata
 
 # Define some colors and other constants

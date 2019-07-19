@@ -8,6 +8,8 @@ a. Single regex that matches either of these:
     
     antelopes rock out
 
+    Answer: [a-z] would match both the sentences
+
 b. Regex that matches either of:
 
     goat
@@ -17,6 +19,8 @@ b. Regex that matches either of:
   but not:
 
     boat
+
+    Answer : \b(?!boat)\b\S+ matches goat and moat except boat 
 
 c. Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
@@ -30,6 +34,8 @@ c. Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   
     812-2-10
 
+    Answer : (\d{4})-(\d{1,2})-(\d{1,2}) but it will not match 812-2-10 but can also match 3333-33-33
+
 ### 2. State Machines
 
 > A useful tool for drawing state machines is [Evan's FSM
@@ -42,6 +48,25 @@ a. Draw a state machine that corresponds to the following regex:
 
   Remember the ε transition can be used to move between states without
   consuming input. 
+
+  Answer: firstly i have to explain the regex
+ 
+ ab*c+d?[ef]
+
+ a matches the characters  a literally (case sensitive)
+b*
+matches the character b literally (case sensitive)
+* Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+c+
+matches the character c literally (case sensitive)
++ Quantifier — Matches between one and unlimited times, as many times as possible, giving back as needed (greedy)
+d?
+matches the character d literally (case sensitive)
+? Quantifier — Matches between zero and one times, as many times as possible, giving back as needed (greedy)
+Match a single character present in the list below [ef]
+ef matches a single character in the list ef (case sensitive)
+the the statemachine  is attachech i the  picture 
+
 
 b. Draw a state machine diagram for the lion and label the transition events that
   cause state transitions.
